@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="/static/css/textanalysis.css">
+
+    <link rel="icon" href="static/images/finalLogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="static/assets/css/fontawesome.css">
+<link rel="stylesheet" href="static/assets/css/templatemo-seo-dream.css">
+<link rel="stylesheet" href="static/assets/css/animated.css">
+<link rel="stylesheet" href="static/assets/css/owl.css">
+
+</head>
+
+<style>
+    body {
+        background-color: #222830;
+    }
+
+    .button {
+        height: 50px;
+        width: 80px;
+        /* display: none; */
+        position: fixed;
+        bottom: 15px;
+        right: 7px;
+        z-index: 99;
+        padding: 0px;
+        font-size: 60px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        vertical-align: middle;
+        display: table-cell;
+    }
+</style>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+		 
+		  <!-- ***** Preloader End ***** -->
+		
+		  <!-- ***** Header Area Start ***** -->
+		  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+			<div class="container">
+			  <div class="row">
+				<div class="col-12">
+				  <nav class="main-nav">
+					<!-- ***** Logo Start ***** -->
+					<a href="index.html" class="logo">
+					  <h4>Audio Lecture Analysis <img src="static/assets/images/logo-icon.png" alt=""></h4>
+					</a>
+					<!-- ***** Logo End ***** -->
+					<!-- ***** Menu Start ***** -->
+					<ul class="nav">
+					  <li class="scroll-to-section"><a href="/convertwav" class="active">Home</a></li>
+					   <li class="scroll-to-section"><a href="/login">Signout</a></li> 
+					 
+					</ul>        
+					<a class='menu-trigger'>
+						<span>Menu</span>
+					</a>
+					<!-- ***** Menu End ***** -->
+				  </nav>
+				</div>
+			  </div>
+			</div>
+		  </header>
+		  <!-- ***** Header Area End ***** -->
+
+    <!--<div class="wrapper"></div>-->
+
+    <div style="margin: auto;">
+        {% for video in videos %}
+        <iframe src="{{video}}" frameborder="0" width="24.6%"
+            allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        {% endfor %}
+    </div>
+
+    <form action="/textanalysis">
+        <button class="button">←</button>
+    </form>
+
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/jquery.scrollex.min.js"></script>
+    <script src="static/js/jquery.scrolly.min.js"></script>
+    <script src="static/js/browser.min.js"></script>
+    <script src="static/js/breakpoints.min.js"></script>
+    <script src="static/js/util.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
